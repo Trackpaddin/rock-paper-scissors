@@ -8,4 +8,16 @@ function getComChoice() {
         return "scissors";
     }
 }
+
+function getHumanChoice() {
+    let humanChoice = prompt("Rock, paper, or scissors?");
+    if (humanChoice === "rock") {
+        return "rock";
+    } else if (humanChoice === "paper") {
+        return "paper";
+    } else {
+        return "scissors";
+    }
+}
 console.log(getComChoice());
+console.log(getHumanChoice());
