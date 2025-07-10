@@ -49,3 +49,18 @@ function playRound(humanChoice, comChoice) {
         comScore++;
     }
 }
+
+function playGame() {
+    for (let i = 0; i < 5; i++) { // Best of five
+        console.log(`Round + ${i + 1}:`);
+
+        const humanSelection = getHumanChoice();
+        const comSelection = getComChoice();
+
+        playRound(humanSelection, comSelection);
+
+        console.log(`Human score: ${humanScore}, Computer score: ${comScore}`);
+    }
+}
+
+playGame();
