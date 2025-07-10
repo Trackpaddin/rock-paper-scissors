@@ -20,8 +20,6 @@ function getHumanChoice() {
     }
 }
 
-console.log(getComChoice());
-console.log(getHumanChoice());
 
 let humanScore = 0;
 let comScore = 0;
@@ -52,15 +50,22 @@ function playRound(humanChoice, comChoice) {
 
 function playGame() {
     for (let i = 0; i < 5; i++) { // Best of five
-        console.log(`Round + ${i + 1}:`);
-
+        console.log(`Round ${i + 1}:`);
+        console.log("Computer has chosen...")
+        
         const humanSelection = getHumanChoice();
         const comSelection = getComChoice();
+        
 
         playRound(humanSelection, comSelection);
-
+        
         console.log(`Human score: ${humanScore}, Computer score: ${comScore}`);
     }
 }
 
 playGame();
+
+// Improvements:
+// IF human or computer scores are equal, DO NOT increment rounds
+
+// IF either score reaches three, declare appropriate winner and end game
